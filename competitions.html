@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Day 2026 | Competitions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .comp-hero {
+            background: linear-gradient(180deg, rgba(6,12,20,0.5) 0%, rgba(6,12,20,0.7) 100%), 
+                        url('assets/images/banner-energyday.svg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 8%;
+            text-align: center;
+            color: white;
+        }
+
+        .comp-hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .comp-hero-subtitle {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .comp-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(46, 204, 156, 0.15);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .comp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(46, 204, 156, 0.2);
+            border-color: var(--green-primary);
+        }
+
+        .comp-header {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .comp-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .comp-title-section {
+            flex: 1;
+        }
+
+        .comp-title {
+            color: var(--text);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .comp-subtitle {
+            color: var(--green-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .comp-description {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .comp-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(46, 204, 156, 0.1), rgba(52, 152, 219, 0.1));
+            border-radius: 12px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .coming-soon-box {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 50px 40px;
+            background: rgba(46,204,156,0.05);
+            border-radius: 16px;
+            border: 1px dashed rgba(46,204,156,0.3);
+        }
+
+        .coming-soon-icon {
+            font-size: 3rem;
+            color: var(--green-primary);
+            margin-bottom: 20px;
+        }
+
+        .coming-soon-title {
+            color: var(--green-primary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .coming-soon-text {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            .comp-hero {
+                padding: 60px 5%;
+            }
+
+            .comp-hero-title {
+                font-size: 2rem;
+            }
+
+            .comp-card {
+                padding: 30px;
+            }
+
+            .comp-header {
+                gap: 20px;
+            }
+
+            .comp-title {
+                font-size: 1.6rem;
+            }
+
+            .comp-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comp-hero {
+                padding: 50px 4%;
+            }
+
+            .comp-hero-title {
+                font-size: 1.8rem;
+            }
+
+            .comp-card {
+                padding: 25px;
+            }
+
+            .comp-title {
+                font-size: 1.4rem;
+            }
+
+            .comp-subtitle {
+                font-size: 1rem;
+            }
+
+            .coming-soon-box {
+                padding: 35px 25px;
+            }
+
+            .coming-soon-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <header class="comp-hero">
+        <h1 class="comp-hero-title">Competitions</h1>
+        <p class="comp-hero-subtitle">Challenge yourself. Innovate. Lead the future of energy.</p>
+    </header>
+
+    <section style="padding: 80px 5%; max-width: 1400px; margin: 0 auto;">
+        
+        <!-- Coming Soon Notice -->
+        <div class="coming-soon-box" data-aos="fade-up">
+            <div class="coming-soon-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="coming-soon-title">More Competitions Coming Soon!</h3>
+            <p class="coming-soon-text">
+                Stay tuned for additional competitions and activities. Registration details will be announced shortly.
+            </p>
+        </div>
+
+        <!-- Past Competitions Heading -->
+        <h2 class="section-title" style="margin-bottom: 50px;">Past Competitions</h2>
+        
+        <!-- Energenius Hackathon -->
+        <div class="comp-card" data-aos="fade-up">
+            <div class="comp-header">
+                <div class="comp-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="comp-title-section">
+                    <h2 class="comp-title">Energenius Hackathon</h2>
+                    <p class="comp-subtitle">Machine Learning for Energy Systems</p>
+                </div>
+            </div>
+
+            <div class="comp-image">
+                <i class="fas fa-laptop-code" style="font-size: 4rem; opacity: 0.3;"></i>
+            </div>
+
+            <p class="comp-description">
+                The Energenius Hackathon challenges participants to develop machine learning-powered platforms addressing critical energy management applications. Teams design and prototype intelligent systems capable of fuel consumption prediction, anomaly detection in energy infrastructure, and operational optimization through advanced data analytics and visualization dashboards. The competition emphasizes practical implementation of artificial intelligence and machine learning methodologies in industrial energy contexts.
+            </p>
+
+            <!-- COMMENTED OUT COMPETITION DETAILS AND REGISTER BUTTON
+            <div class="comp-details">
+                <h4>Competition Highlights</h4>
+                <p><strong>Format:</strong> Team-based hackathon (24-48 hours)</p>
+                <p><strong>Focus Areas:</strong> Fuel usage prediction, anomaly detection, operational dashboards, energy optimization</p>
+                <p><strong>Skills Required:</strong> Python, Machine Learning, Data Analytics, Energy Systems Knowledge</p>
+            </div>
+
+            <a href="register.html" class="btn">Register Your Team</a>
+            -->
+        </div>
+
+        <!-- Energy Case Challenge -->
+        <div class="comp-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="comp-header">
+                <div class="comp-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="comp-title-section">
+                    <h2 class="comp-title">Energy Case Challenge</h2>
+                    <p class="comp-subtitle">Strategic Analysis & Business Solutions</p>
+                </div>
+            </div>
+
+            <div class="comp-image">
+                <i class="fas fa-chart-line" style="font-size: 4rem; opacity: 0.3;"></i>
+            </div>
+
+            <p class="comp-description">
+                A national-level case competition that challenges teams to analyze complex energy sector challenges and develop comprehensive strategic solutions. Participants engage with real-world business problems in renewable energy integration, grid optimization, energy policy development, and sustainable infrastructure deployment. The competition tests analytical capabilities, strategic thinking, and the ability to translate technical knowledge into actionable business recommendations.
+            </p>
+
+            <!-- COMMENTED OUT COMPETITION DETAILS AND REGISTER BUTTON
+            <div class="comp-details">
+                <h4>Competition Highlights</h4>
+                <p><strong>Format:</strong> Multi-round case analysis (Preliminary + Finals)</p>
+                <p><strong>Focus Areas:</strong> Market analysis, technology assessment, financial modeling, strategic roadmaps</p>
+                <p><strong>Skills Required:</strong> Business Strategy, Financial Analysis, Energy Policy, Presentation Skills</p>
+            </div>
+
+            <a href="register.html" class="btn">View Problem Statement</a>
+            -->
+        </div>
+
+        <!-- Watt's the Answer -->
+        <div class="comp-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="comp-header">
+                <div class="comp-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="comp-title-section">
+                    <h2 class="comp-title">Watt's the Answer!</h2>
+                    <p class="comp-subtitle">Energy-Themed Quiz Competition</p>
+                </div>
+            </div>
+
+            <div class="comp-image">
+                <i class="fas fa-brain" style="font-size: 4rem; opacity: 0.3;"></i>
+            </div>
+
+            <p class="comp-description">
+                An engaging energy-themed quiz competition that tests participants' knowledge across various energy topics, from fundamental concepts to current industry developments. The competition features multiple rounds including rapid-fire questions, visual rounds, and buzzer rounds, covering renewable energy technologies, energy policy, sustainable development, and emerging trends in the energy sector. Designed to encourage knowledge sharing and healthy competition among energy enthusiasts.
+            </p>
+
+            <!-- COMMENTED OUT COMPETITION DETAILS AND REGISTER BUTTON
+            <div class="comp-details">
+                <h4>Competition Highlights</h4>
+                <p><strong>Format:</strong> On-day quiz competition with multiple rounds</p>
+                <p><strong>Topics:</strong> Energy fundamentals, renewable technologies, policy & regulations, current affairs</p>
+                <p><strong>Skills Required:</strong> Quick thinking, Energy sector knowledge, Team coordination</p>
+            </div>
+
+            <a href="register.html" class="btn">Register Now</a>
+            -->
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

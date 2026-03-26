@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Day | Highlights 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .highlight-hero { 
+            height: 60vh; 
+            background: linear-gradient(180deg, rgba(6,12,20,0.7) 0%, rgba(6,12,20,1) 100%), url('assets/images/highlights/2025-cover.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            flex-direction: column; 
+        }
+
+        .highlights-intro {
+            max-width: 900px;
+            margin: 80px auto 60px;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .highlights-intro h2 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .highlights-intro p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .highlights-grid {
+            max-width: 1400px;
+            margin: 0 auto 80px;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .highlight-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(46, 204, 156, 0.15);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-primary), var(--green-secondary));
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(46, 204, 156, 0.2);
+            border-color: var(--green-primary);
+        }
+
+        .highlight-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(46, 204, 156, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--green-primary);
+            margin-bottom: 25px;
+        }
+
+        .highlight-title {
+            color: var(--text);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .highlight-description {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight-speaker {
+            padding: 20px;
+            background: rgba(46, 204, 156, 0.05);
+            border-left: 3px solid var(--green-primary);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .speaker-name {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+
+        .speaker-title {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .stats-section {
+            background: var(--nav-bg);
+            padding: 80px 5%;
+            margin: 80px 0;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: var(--card);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(46, 204, 156, 0.15);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--green-primary);
+            box-shadow: 0 10px 30px rgba(46, 204, 156, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--green-primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .highlight-card {
+                padding: 30px;
+            }
+
+            .highlight-title {
+                font-size: 1.3rem;
+            }
+
+            .highlights-intro h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="site-header"></div>
+
+    <header class="highlight-hero">
+        <h1 data-aos="fade-up" style="font-size: 3.5rem; margin-bottom: 10px; color: #fff;">Energy Day 2025</h1>
+        <p data-aos="fade-up" data-aos-delay="100" style="color: var(--green-primary); font-size: 1.2rem; letter-spacing: 2px;">Relive the Experience</p>
+        <a data-aos="fade-up" href="https://raw.githubusercontent.com/EXXCALIBURXX/energy-day-2026/main/assets/Brochure.pdf" target="_blank" class="btn" style="margin-top: 40px;">View Full Brochure</a>
+    </header>
+
+    <div class="highlights-intro">
+        <h2 data-aos="fade-up">A Closer Look at Energy Day 2025</h2>
+    </div>
+
+    <div class="highlights-grid">
+        <div class="highlight-card" data-aos="fade-up">
+            <div class="highlight-icon">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <h3 class="highlight-title">AI, Capital, and Clean Energy: Trifecta Powering a Sustainable Future</h3>
+            <p class="highlight-description">
+                Mr. Vineet Mittal delivered a keynote examining the strategic convergence of artificial intelligence, capital investment, and clean energy technologies. The session explored how this triad is reshaping global energy systems and accelerating sustainable infrastructure development.
+            </p>
+            <div class="highlight-speaker">
+                <div class="speaker-name">Mr. Vineet Mittal</div>
+                <div class="speaker-title">Chairman, Avaada Group</div>
+            </div>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="highlight-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h3 class="highlight-title">The Renewable Energy Paradox: Are We Ignoring The Environmental Cost?</h3>
+            <p class="highlight-description">
+                Leading experts critically examined often-overlooked environmental implications of renewable energy infrastructure. The panel analyzed resource extraction, manufacturing processes, and lifecycle impacts, fostering nuanced perspectives on balancing sustainability objectives with comprehensive environmental assessments.
+            </p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="highlight-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="highlight-title">Energy Case Challenge</h3>
+            <p class="highlight-description">
+                The Energy Case Challenge 2025, powered by INA Solar, concluded with finalist presentations from over 700 national registrations. Teams presented comprehensive strategies addressing renewable energy integration, grid optimization, and sustainable infrastructure deployment, demonstrating advanced analytical capabilities and industry-relevant problem-solving approaches.
+            </p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up">
+            <div class="highlight-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3 class="highlight-title">Energenius Hackathon</h3>
+            <p class="highlight-description">
+                The second edition of Energenius Hackathon, powered by Repos Energy, challenged participants to develop ML-powered platforms for fuel consumption prediction, anomaly detection, and operational optimization. Teams produced functional prototypes with applications in industrial energy management and efficiency enhancement.
+            </p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="highlight-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+            <h3 class="highlight-title">Lab Visits & Research Exhibition</h3>
+            <p class="highlight-description">
+                Participants accessed state-of-the-art research facilities at IIT Bombay's Department of Energy Science and Engineering. The laboratory tours showcased experimental setups and ongoing research in power systems, energy storage, thermal management, and renewable energy applications, enabling direct interaction between industry professionals and research faculty.
+            </p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="highlight-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3 class="highlight-title">Student Research Presentations</h3>
+            <p class="highlight-description">
+                Students presented cutting-edge research across power systems and grid integration, energy storage systems, renewable and sustainable energy technologies, and thermal management in industrial processes. The presentations demonstrated innovative approaches to contemporary energy challenges and research excellence.
+            </p>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up">
+                <div class="stat-number">700+</div>
+                <div class="stat-label">Case Challenge Registrations</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Days of Innovation</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Industry Leaders</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Major Competitions</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Highlights Section -->
+    <section style="padding: 80px 5%;">
+        <h2 class="section-title">Photo Highlights</h2>
+        <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/1.JPG" alt="Event Photo 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/2.JPG" alt="Event Photo 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/3.JPG" alt="Event Photo 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/4.JPG" alt="Event Photo 4">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/5.JPG" alt="Event Photo 5">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/images/Past Highlights/6.JPG" alt="Event Photo 6">
+                </div>
+                 
+                 
+                 
+            </div>
+            <button class="carousel-control carousel-prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-control carousel-next" onclick="moveSlide(1)">❯</button>
+        </div>
+       <div class="carousel-dots" id="carouselDots">
+   	 <span class="dot active" onclick="currentSlide(0)"></span>
+  	 <span class="dot" onclick="currentSlide(1)"></span>
+   	 <span class="dot" onclick="currentSlide(2)"></span>
+   	 <span class="dot" onclick="currentSlide(3)"></span>
+   	 <span class="dot" onclick="currentSlide(4)"></span>
+   	 <span class="dot" onclick="currentSlide(5)"></span>
+   	 <span class="dot" onclick="currentSlide(6)"></span>
+	</div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/site.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
