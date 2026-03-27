@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="720" viewBox="0 0 1920 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08343a"/>
+      <stop offset="45%" stop-color="#0f6f4d"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="6" fill="rgba(255,255,255,0.02)" />
+      <circle cx="32" cy="32" r="5" fill="rgba(255,255,255,0.01)" />
+    </pattern>
+  </defs>
+
+  <!-- background gradient -->
+  <rect width="100%" height="100%" fill="url(#g1)" />
+
+  <!-- subtle radial highlight (centered higher) -->
+  <rect width="100%" height="100%" fill="url(#r1)" />
+
+  <!-- abstract cylinders / rounded bars (vector, scalable) - moved toward left/top and softened -->
+  <g fill-opacity="0.09" transform="translate(40,40) scale(1)">
+    <g fill="#ffffff">
+      <rect x="0" y="20" width="56" height="420" rx="28" transform="skewX(-10) scale(1,0.95)"/>
+      <rect x="72" y="40" width="56" height="380" rx="28" transform="skewX(-10) scale(1,0.96)"/>
+      <rect x="144" y="60" width="56" height="340" rx="28" transform="skewX(-10) scale(1,0.97)"/>
+      <rect x="216" y="80" width="56" height="300" rx="28" transform="skewX(-10) scale(1,0.98)"/>
+      <rect x="288" y="100" width="56" height="260" rx="28" transform="skewX(-10) scale(1,0.99)"/>
+    </g>
+  </g>
+
+  <!-- soft dot pattern overlay (very subtle) -->
+  <rect width="100%" height="100%" fill="url(#dots)" opacity="0.9" />
+
+  <!-- softer vignette to darken edges gently -->
+  <rect width="100%" height="100%" fill="black" opacity="0.04" />
+
+  <!-- accessible title (for SVG viewers) -->
+  <title>Energy Day banner placeholder</title>
+</svg>
