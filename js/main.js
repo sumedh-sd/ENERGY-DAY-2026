@@ -20,10 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Speaker carousel scroll function
-function scrollSpeakers(direction) {
-    const wrapper = document.getElementById('speakersWrapper');
+function scrollSpeakers(direction, event) {
+    // Find the closest carousel container from the clicked button
+    const button = event ? event.currentTarget : -1;
+    let wrapper;
+    
+    if(button) {
+        wrapper = button.closest('.speakers-carousel').querySelector('.speakers-wrapper');
+    } else {
+        // Fallback for inline onclick calls - try both wrapper IDs
+        wrapper = document.getElementById('speakersWrapper') || document.getElementById('speakersWrapper2');
+    }
+    
     if(wrapper) {
-        const cardWidth = 260; // approximate width + gap
+        const cardWidth = 280; // width + gap
         wrapper.scrollBy({
             left: direction * cardWidth,
             behavior: 'smooth'

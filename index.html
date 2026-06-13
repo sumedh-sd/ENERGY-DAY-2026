@@ -194,6 +194,119 @@
             }
         }
 
+        /* Theme Section */
+        .theme-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+        }
+
+        .theme-label {
+            color: #10b981;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .theme-title {
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-pillars {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pillar {
+            background: rgba(16, 185, 129, 0.15);
+            border: 2px solid #10b981;
+            padding: 20px 30px;
+            border-radius: 12px;
+            color: #d2ff96;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            min-width: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .theme-title {
+                font-size: 2rem !important;
+            }
+            .theme-pillars {
+                gap: 15px !important;
+            }
+            .pillar {
+                padding: 15px 20px !important;
+                font-size: 1rem !important;
+            }
+        }
+
+        /* Trifecta Section */
+        .trifecta-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .trifecta-pillars {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trifecta-pill {
+            background: transparent;
+            border: 2px solid #10b981;
+            color: #d2ff96;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            box-shadow: none;
+            transition: all 0.3s ease;
+            text-shadow: none;
+        }
+
+        .trifecta-pill:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: #d2ff96;
+            color: #ffffff;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .trifecta-title {
+                font-size: 2rem !important;
+            }
+            .trifecta-pillars {
+                gap: 15px !important;
+            }
+            .trifecta-pill {
+                padding: 10px 20px !important;
+                font-size: 1rem !important;
+            }
+        }
+
         @media (max-width: 480px) {
             .hero {
                 height: 80vh !important;
@@ -225,7 +338,22 @@
             .highlights-list {
                 font-size: 0.9rem !important;
             }
-        }
+            .trifecta-title {
+                font-size: 1.5rem !important;
+                margin-bottom: 15px !important;
+            }
+            .trifecta-pillars {
+                gap: 10px !important;
+                flex-direction: column;
+            }
+            .trifecta-pill {
+                width: 100% !important;
+                padding: 8px 16px !important;
+                font-size: 0.95rem !important;
+            }
+          
+            }
+        
     </style>
 </head>
 <body>
@@ -257,19 +385,23 @@
                     Register Now
                 </a>
             </div>
+
+           
             
         </div>
     </header>
+
+   
 
     <section class="about-section">
         <h2 class="section-title">About Energy Day</h2>
         <div class="about-grid">
             <div>
                 <p class="about-text">
-                    Energy Day is the biggest annual event for our department here at IIT Bombay. 
+                    Energy Day is the biggest annual research symposium for our department here at IIT Bombay. 
                     It's the one time of year we bring everyone together - students, professors, and industry experts - to move beyond textbooks and actually talk about the future of energy.                </p>
                 <p class="about-text">
-                    Over two days, students, academics, industry professionals, and
+                    During Energy day, students, academics, industry professionals, and
                     researchers converge to explore cutting-edge technologies,
                     participate in competitions, and network with leading figures in the
                     energy sector.
@@ -282,27 +414,116 @@
                     <li>Panel Discussions</li>
                     <li>Networking Sessions</li>
                     <li>Presentations</li>
-                    <li>Lab Tours & Demonstrations</li>
+                    <!---<li>Lab Tours & Demonstrations</li>-->
                 </ul>
             </div>
         </div>
     </section>
 
+     
+
+ <section class="speakers-section">
+        <h2 class="section-title">This Year key Speakers & Panelists</h2>
+        <p class="speakers-intro">
+            Join the visionaries engineering the Energy Trifecta: Bridging the gap between unmatched efficiency and global energy security
+        </p>
+        <div class="speakers-carousel" data-aos="zoom-in-up">
+            <button class="speakers-control speakers-prev" aria-label="Previous speakers" onclick="scrollSpeakers(-1, event)">
+                &#9664
+            </button>
+            <div class="speakers-wrapper" id="speakersWrapper">
+
+    <div class="speaker-card">
+        <img src="https://acr.iitbombay.org/wp-content/uploads/2023/08/DonorInti_461x530_0001_ProfGudi461x530.jpg" alt="Prof. Ravindra D. Gudi">
+        <h3 class="speaker-name">Prof. Ravindra D. Gudi</h3>
+        <p class="speaker-role">Deputy Director</br> IIT BOMBAY</p>
+        <p class="speaker-desc">Expert in process systems engineering and green engineering, specifically focusing on the modeling, optimization, control, and fault diagnosis of industrial process systems.</p>
+    </div>
+
+    <div class="speaker-card">
+        <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/sangkaran.jpg" alt="Dr. Sangkaran Ratnam">
+        <h3 class="speaker-name">Dr. Sangkaran Ratnam</h3>
+        <p class="speaker-role">Country Chair TotalEnergies in India</p>
+        <p class="speaker-desc">Leading strategic transformations across the LNG, city gas distribution, and renewable energy sectors</p>
+    </div>
+
+    <div class="speaker-card">
+        <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/atul%20deo.jpg" alt="Mr. Atul Deo">
+        <h3 class="speaker-name">Mr. Atul Deo</h3>
+        <p class="speaker-role">Technical Director TotalEnergies Gas & Power India</p>
+        <p class="speaker-desc">Specializes in LNG operations while also pioneering sustainability initiatives such as methane emissions reduction</p>
+    </div>
+
+    <div class="speaker-card">
+        <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/Mayank-Pareek.png" alt="Prof. Mayank Pareek">
+        <h3 class="speaker-name">Prof. Mayank Pareek</h3>
+        <p class="speaker-role">Professor of Practice The Shailesh J. Mehta School of Management (SJMSOM)</br> IIT Bombay</p>
+        <p class="speaker-desc">Brings over 35 years of leadership experience in the Indian automotive industry.</p>
+    </div>
+
+    <div class="speaker-card">
+        <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/satish-balram-agnihotri-profile.jpg" alt="Prof. Satish B. Agnihotri">
+        <h3 class="speaker-name">Prof. Satish B. Agnihotri</h3>
+        <p class="speaker-role">Emeritus Fellow and Former Head of CTARA</br> IIT Bombay</p>
+        <p class="speaker-desc">An IAS veteran and an expert in public policy, renewable energy, and rural development</p>
+    </div>
+
+     <div class="speaker-card">
+        <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/Shelly%20Abraham.jpg" alt="Mr. Shelly Abraham">
+        <h3 class="speaker-name">Mr. Shelly Abraham</h3>
+        <p class="speaker-role">Executive Director (Supply Chain Optimization)</br> BPCL</p>
+        <p class="speaker-desc">Expert in oil and gas supply chain optimization and crude procurement, Currently leads BPCL’s strategic transition into renewable energy and green hydrogen production.</p>
+    </div>
+
+</div><button class="speakers-control speakers-next" aria-label="Next speakers" onclick="scrollSpeakers(1, event)">
+                &#9654
+            </button>
+        </div>
+    </section>
+<section class="speakers-section">
+        <h2 class="section-title">Alumni Key Speakers</h2>
+        <p class="speakers-intro">
+            Join the visionaries engineering the Energy Trifecta: Bridging the gap between unmatched efficiency and global energy security
+        </p>
+        <div class="speakers-grid-container" data-aos="zoom-in-up">
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/Atharva%20Patankar.jpg" alt="Atharva Patankar">
+                    <h3>Atharva Patankar</h3>
+                    <p class="speaker-role">Director of Greyeast Technologies Private Limited</p>
+                    <p class="speaker-desc">Specializing in microorganism development for waste management and fermentation technologies</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/sumanshu%20agarwal.jpg" alt="Dr. Sumanshu Agarwal">
+                    <h3>Dr. Sumanshu Agarwal </h3>
+                    <p class="speaker-role">Senior Manager in Cell Industrialization and Integration at Reliance New Energy</p>
+                    <p class="speaker-desc">Expert in solar cell device physics and photovoltaics, specializing in the numerical modeling and industrialization.</p>
+                </div>
+                <div class="speaker-card">
+                    <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/ProfilePhoto_ShashwataGhosh.jpg" alt="Prof. Shashwata Ghosh">
+                    <h3>Prof. Shashwata Ghosh</h3>
+                    <p class="speaker-role">Chairperson, Knowledge Resource Centre</p>
+                    <p class="speaker-desc">Expert in Conceptual design of chemical processes and Process modelling and simulation.</p>
+                </div>            </div>
+        </div>
+    </section>
     <section class="speakers-section">
-        <h2 class="section-title">Featured Speakers & Panelists</h2>
+        <h2 class="section-title">Last Year Featured Speakers & Panelists</h2>
         <p class="speakers-intro">
             Collaborate with the industry leaders and experts shaping the future of energy technology and sustainability.
         </p>
         <div class="speakers-carousel" data-aos="zoom-in-up">
-            <button class="speakers-control speakers-prev" aria-label="Previous speakers" onclick="scrollSpeakers(-1)">
-                &#9664;
+            <button class="speakers-control speakers-prev" aria-label="Previous speakers" onclick="scrollSpeakers(-1, event)">
+                &#9664
             </button>
-            <div class="speakers-wrapper" id="speakersWrapper">
+            <div class="speakers-wrapper" id="speakersWrapper2">
                 <div class="speaker-card">
                     <img src="./assets/images/SPEAKER LIST/PROF. SHIREESH B KEDARE.JPG" alt="Prof. Shireesh B Kedare">
                     <h3>Prof. Shireesh B Kedare</h3>
-                    <p class="speaker-role">Director, IIT Bombay</p>
-                    <p class="speaker-desc">Leading innovation in energy science and education</p>
+                    <p class="speaker-role">Director of IIT Bombay,</p>
+                    <p class="speaker-desc">He is pioneering solar thermal innovation and leading industrial decarbonization strategies</p>
+
                 </div>
                 <div class="speaker-card">
                     <img src="./assets/images/SPEAKER LIST/SHRI. PRAFULLA VARHADE.jpg" alt="Shri. Prafulla Varhade">
@@ -341,16 +562,26 @@
                     <p class="speaker-desc">Wind energy sustainability leader</p>
                 </div>
             </div>
-            <button class="speakers-control speakers-next" aria-label="Next speakers" onclick="scrollSpeakers(1)">
-                &#9654;
+            <button class="speakers-control speakers-next" aria-label="Next speakers" onclick="scrollSpeakers(1, event)">
+                &#9654
             </button>
         </div>
     </section>
 
-    <section class="connect-section">
-        <h2 class="section-title">Our Network</h2>
 
-        <h3 class="subsection-title">Previous Year Sponsors</h3>
+    <section class="connect-section">
+        <h2 class="section-title">This year's title sponsors</h2>
+
+        <div class="sponsors-grid" style="max-width: 400px; margin: 0 auto 60px;">
+        <div class="card" >
+                <img src="https://raw.githubusercontent.com/sumedh-sd/ENERGY-DAY-2026/main/photo/Photograph%20Upload%20%20%20(File%20responses)/Total%20energies.png" 
+                alt="TotalEnergies">       
+            </div>
+        </div>
+        </div>
+
+        <h2 class="section-title">Our Network</h2>
+                <h3 class="subsection-title">Previous Year Sponsors</h3>
         <p class="section-desc">
             Companies that supported and powered Energy Day last year.
         </p>

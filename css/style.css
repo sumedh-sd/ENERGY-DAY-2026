@@ -334,10 +334,32 @@ nav .btn:hover {
     visibility: hidden;
     pointer-events: none;
 }
+.speaker-role {
+    font-family: 'Georgia', serif;   /* or swap for a Google Font */
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+/* Grid layout for fixed number of speakers */
+.speakers-grid-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
 @media (max-width: 768px) {
     .speakers-prev, .speakers-next { display: none; }
     .speaker-card { min-width: 200px; }
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Layouts --- */
@@ -618,6 +640,26 @@ footer a:hover {
     }
     .nav-links.active { display: flex; }
     .mobile-toggle { display: block; }
+}
+
+/* Extra small mobile devices (480px and below) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.8rem 3%;
+        gap: 10px;
+    }
+    
+    .theme-logo img {
+        height: 35px;
+    }
+    
+    .nav-links {
+        top: 65px;
+    }
+    
+    .mobile-toggle {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -965,7 +1007,7 @@ footer a:hover {
     }
 
     .theme-logo img { 
-        height: 45px; 
+        height: 50px; 
     }
 
     .logo { font-size: 1.1rem; }
@@ -1051,11 +1093,25 @@ footer a:hover {
     object-fit: contain;
     filter: grayscale(0%);
     transition: all 0.3s ease;
+
 }
 
 .sponsors-grid .card:hover img {
     filter: grayscale(0%);
     transform: scale(1.05);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Attendees Grid */
@@ -1122,6 +1178,7 @@ footer a:hover {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 20px;
         padding: 0 10px;
+        justify-items: center;
     }
     
     .sponsors-grid .card {
@@ -1158,13 +1215,15 @@ footer a:hover {
     }
     
     .sponsors-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 15px;
+        justify-items: center;
     }
     
     .sponsors-grid .card {
         padding: 15px;
         min-height: 90px;
+        max-width: 100%;
     }
     
     .sponsors-grid .card img {
